@@ -47,4 +47,4 @@ npm run dev
     - `Tasks.jsx`: Componente que muestra la lista de tareas.
 
 ## Más información
-[PoC - Desarrollo de una Apliacion Web Con React.js]()
+[PoC - Desarrollo de una Apliacion Web Con React.js](https://github.com/sebafermanelli/react-poc/blob/main/PoC%20-%20Desarrollo%20de%20una%20Aplicaci%C3%B3n%20Web%20con%20React.pdf)
