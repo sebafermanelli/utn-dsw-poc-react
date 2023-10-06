@@ -50,7 +50,7 @@ button {
 	background-color: #1a1a1a;
 	cursor: pointer;
 	transition: border-color 0.25s;
-	margin: 1em;
+	margin: 0.5em;
 }
 button:hover {
 	border-color: #646cff;
@@ -83,14 +83,18 @@ ul {
 	padding: 0;
 }
 li {
-	background: linear-gradient(to right, #8a2be2, #535bf2);
-	color: white;
-	padding: 10px;
-	margin-bottom: 10px;
 	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 1em;
+	margin: 1em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #1c1c1c6e;
+	transition: border-color 0.25s;
 }
 li:hover {
-	background: linear-gradient(to right, #892be280, #535bf283);
+	border-color: #646cff;
 }
 
 @media (prefers-color-scheme: light) {

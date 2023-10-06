@@ -11,9 +11,21 @@ function App() {
 	};
 
 	const handleAddTask = () => {
-		setTasks([...tasks, taskInput]);
+		setTasks([...tasks, { text: taskInput, completed: false }]);
 		setTaskInput('');
 	};
+
+	const handleToggleTask = (index) => {
+    const updatedTasks = tasks.map((task, i) =>
+      i === index ? { ...task, completed: !task.completed } : task
+    );
+    setTasks(updatedTasks);
+  };
+
+	const handleDeleteTask = (index) => {
+    const updatedTasks = tasks.filter((task, i) => i !== index);
+    setTasks(updatedTasks);
+  };
 
 	return (
 		<>
@@ -21,7 +33,7 @@ function App() {
 			<input type="text" value={taskInput} onChange={handleTaskInputChange} placeholder="Ingresa una tarea" />
 			<button onClick={handleAddTask}>Agregar tarea</button>
 
-			<Tasks tasks={tasks}></Tasks>
+			<Tasks tasks={tasks} onTaskDelete={handleDeleteTask} onTaskToggle={handleToggleTask}></Tasks>
 
 			<a href="https://github.com/sebafermanelli/react-poc" target="_blank">
 				GitHub
